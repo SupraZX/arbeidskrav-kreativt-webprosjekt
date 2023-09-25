@@ -1,5 +1,5 @@
 # arbeidskrav-kreativt-webprosjekt
-Av Ole Martin og Fillip
+Av Ole Martin og Filip
 Innholdfortegnelse
 1. Tema
 2. Bruk av tags
