@@ -13,4 +13,6 @@ NB! Trenger IKKE være responsiv, ref. @media queries fks.
    Tema til vårt nettside er
 
 
-2. 
+
+
+4. Vi bruker Flex display og IKKE: block, inline, inline-block og none
