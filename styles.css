@@ -6,13 +6,13 @@
     background-size: cover;
 }
 
-.background-container {
+.index-background-container {
     position: relative;
     width: 100%;
     height: 100vh;
 }
 
-.content-container {
+.index-content-container {
     position: absolute;
     top: 50%;
     left: 80%; /* styre retning på x aksen div som inneholder href */
@@ -67,9 +67,15 @@
 }
 
 .main-background-container {
-    
+    position: relative;
+    width: 100%;
+    height: 100vh; 
 }
 
 .main-content-container {
-    
+    position: absolute;
+    top: 50%;
+    left: 80%; /* styre retning på x aksen div som inneholder href */
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
