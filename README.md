@@ -1,5 +1,8 @@
 # arbeidskrav-kreativt-webprosjekt
 https://suprazx.github.io/arbeidskrav-kreativt-webprosjekt/
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
 Av Ole Martin og Filip
 Innholdfortegnelse
 1. Tema
