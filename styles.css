@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     background: url('images/dreamworld.png') right top no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 .index-background-container {
