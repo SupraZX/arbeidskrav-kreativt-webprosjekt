@@ -1,5 +1,5 @@
 /* INDEX.HTML */
-body {
+#index-body {
     margin: 0;
     padding: 0;
     background: url('images/dreamworld.png') right top no-repeat;
@@ -59,7 +59,7 @@ body {
 
 
 /* MAIN.INDEX */
-#main-bk {
+#main-body {
     margin: 0;
     padding: 0;
     background: url('images/pixel-background.avif') right top no-repeat;
