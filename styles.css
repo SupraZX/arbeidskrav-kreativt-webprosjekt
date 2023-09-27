@@ -63,7 +63,7 @@
     margin: 0;
     padding: 0;
     background: url('images/pixel-background.avif') right top no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 .main-background-container {
