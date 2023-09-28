@@ -62,9 +62,8 @@
 #main-body {
     margin: 0;
     padding: 0;
-    background: url('images/pixel-background.avif') right top no-repeat;
-    height: 100%;
-    width: 100%;
+    background: url('images/thromeroom-pixel.png') right top no-repeat;
+    background-size: cover;
 }
 
 .main-background-container {
