@@ -1,3 +1,6 @@
+<!--
+Begge to har lagt inn og jobbet med denne HTML siden sammen
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,43 +12,81 @@
 <body>
 
 
-    <div class="container">
-
-        <img id = "background-image" src = "images/throneroom-pixel.png">
+    <div class="container"> <!-- Container for begge nettsidene. Her putter vi alle elementer som brukes i arbeidskravet -->
+        <div id="info-box">
+            <p> <!-- Hver P tag fungerer som en <br> -->
+                1. Talk with the adventurer.
+            </p>
+            <p>
+                2. Talk with Uther.
+            </p>
+            <p>
+                3. Talk with Jaina (or Sylvanas?).
+            </p>
+        </div>
+        <img id = "background-image" src = "images/throneroom-pixel.png" alt="Bakgrunnsbildet av tronerommet">
         <input type="checkbox" id="trigger" class="trigger-checkbox">
 
         <label for="trigger" class="trigger-label">
             <img id = "sylvanas" src = "images/sylvanas.gif" alt="En transparent GIF">
         </label>
+        <div id="sylvanas-text-overlay">
+            <p>Mwuahaha!</p>
+        </div>
 
         
-        <div id ="herodiv">
+        <div id ="main-character-hover">
             <img id = "main-character" src = "images/main-character.gif" alt="En transparent GIF">
+            <div id="main-character-text-overlay" class="text-overlay">
+                <p>
+                    I need your help Champion.
+                </p>
+                <p>
+                    Talk with Uther.
+                </p>
+
+            </div>
         </div>
-        
-       
 
         <img id = "arrow" src = "images/arrow.png" alt="En transparent GIF">
 
         <div id="uther-hover">
             <img id = "uther" src = "images/uther.gif" alt="En transparent GIF">
-            <div id="uther-text-overlay">
-                <p>tetsadaeqewebprosjekt</p>
+            <div id="uther-text-overlay" class="text-overlay">
+                <p>
+                    Sylvana have stolen my dreams!
+                </p>
+                <p>
+                    Jaina has opened a portal for you. Follow Sylvana, dont let her get away!
+                </p>
+                <p>
+                    Talk with Jaina.
+                </p>
             </div>
         </div>
 
         <div id="jaina-hover">
             <img id = "jaina" src = "images/jaina.gif" alt="En transparent GIF">
-            <div id= "jaina-text-overlay">
-                <p>qerqfdwfwfqf</p>
+            <div id= "jaina-text-overlay" class="text-overlay">
+                <p>
+                    Fast, Champion!
+                </p>
+                <p>
+                    Jump into the portal!
+                </p>
             </div>
         </div>
 
-        <img id = "jaina-portal" src = "images/jaina-portal.gif" alt="En transparent GIF">
-        <div class="portal"></div>
-        <div class="glitch_wrap">
-            <div class="glitch"></div>
+        <a href="slott.html">
+        <div id="jaina-portal">
+                <img src="images/jaina-portal.gif" alt="Portelen til Jaina">
+                <div class="glitch_wrap">
+                    <div class="glitch">
+                        <img src="images/pixel-slott2.png" alt="Synlig slott i portalen">
+                    </div>
+                 </div>
         </div>
+    </a>
 
     </div>
 </body>
