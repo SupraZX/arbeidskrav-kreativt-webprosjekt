@@ -1,3 +1,7 @@
+/* Begge to har jobbet sammen på både index.html og main.html */
+/* Vi har begget jobbet mye om samme element og kode (sittet mye ved siden av hverandre og sett på hverandre kode) */
+/* Det er helst keyframes og glitch klassene/aninmasjon som vi må ha tatt inspirasjon ifra, som en liten extra  */
+
 /* 
 
 ██████╗░███████╗░██████╗░░██████╗░███████╗  ██╗░░██╗████████╗███╗░░░███╗██╗░░░░░
@@ -8,7 +12,7 @@
 ╚═════╝░╚══════╝░╚═════╝░░╚═════╝░╚══════╝  ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░░░░╚═╝╚══════╝
 
 */
-html, body {
+html, body { /* Denne koden setter viewport til max */
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -16,7 +20,7 @@ html, body {
     overflow: hidden;
 }
 
-.container {
+.container { /* Containeren grupperer innholdet vårt for hva nettsiden skal innholde, felles får begge html. Denne skal ha relative posisjon, resten absolute. */
     height: 100%; 
     width: 100%;
     display: flex;
@@ -30,23 +34,14 @@ html, body {
     padding: 0px;
 }
 
-#background-image{
+#background-image{ /* Definerer bakgrunnsbildetene sine egenskaper som er felles for begge html  */
     position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-/* m-background-image {
-    height: auto;
-    width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    background-position: bottom;
-} */
-
 /* 
-
 
 ██╗███╗░░██╗██████╗░███████╗██╗░░██╗░░░██╗░░██╗████████╗███╗░░░███╗██╗░░░░░
 ██║████╗░██║██╔══██╗██╔════╝╚██╗██╔╝░░░██║░░██║╚══██╔══╝████╗░████║██║░░░░░
@@ -55,12 +50,9 @@ html, body {
 ██║██║░╚███║██████╔╝███████╗██╔╝╚██╗██╗██║░░██║░░░██║░░░██║░╚═╝░██║███████╗
 ╚═╝╚═╝░░╚══╝╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░░░░╚═╝╚══════╝
 
-
 */
 
-
-
-#maincharacter{
+#maincharacter{ /* Hovedkarakteren går igjen på begge sider */
     position: absolute;
     transform: translateX(-50%);
     width: auto;
@@ -68,7 +60,8 @@ html, body {
     top: 55%;
     left: 35%;
 }
-#dragon{
+
+#dragon{ /* Drage gif til index.html  */
     position: absolute;
     transform: translateX(-50%);
     width: auto;
@@ -76,7 +69,7 @@ html, body {
     top: 3%;
     left: 48%;
 }
-#firebreath{
+#firebreath{ /* Flammen ut av munnen til dragen, det er en egen gif  */
     position: absolute;
     transform: translateX(-50%);
     width: auto;
@@ -87,18 +80,18 @@ html, body {
 }
 
 
-#hovereffect-portal{
+#hovereffect-portal{ /* Hover effekt til portalen på bildet. */
     position: absolute;
     width: 10%;
     height: 44%;
     top: 27%;
     left: 75%;
 }
-#hovereffect-portal img{
+#hovereffect-portal img{ /* Dette er gifen */
     max-width: 40%;
     height: auto;
 }
-#hovereffect-portal::before{
+#hovereffect-portal::before{ /* Definerer hvordan elementet skal være, usynlig frem til du hovrer*/
     content: "";
     position: absolute;
     top: 2%;
@@ -110,11 +103,11 @@ html, body {
     opacity: 0;
     transition: opacity 0.3s;
 }
-#hovereffect-portal:hover::before{
+#hovereffect-portal:hover::before{ /* Elementet skal være være synlig når vi hovrer */
     opacity: 1;
 }
 
-#eyes{
+#eyes{ /* Dette er bare en liten morsom gif på forsiden */
     position: absolute;
     transform: translateX(-50%);
     width: auto;
@@ -123,19 +116,19 @@ html, body {
     left: 10%;
 }
 
-@font-face{
+@font-face{ /* Filip fant denne på 1001fonts.com */
     font-family: myFont;
     src:url(images/RUBBBB__.TTF); 
 }
 
-@-webkit-keyframes glow {
+@keyframes glow { /* Får teksten til å gløde */
     from {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #641cbb, 0 0 40px #93269f, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
     }
 
   }
 
-.container h1 { 
+.container h1 { /* Filip la til glødeeffekt på h1, source= w3schools */
     font-family: myFont;
     font-size: 25px;
     color: darkred;
@@ -150,7 +143,7 @@ html, body {
     animation: glow 1s ease-in-out infinite alternate;
     transform: translateX(-50%);
 }
-.container h2 { 
+.container h2 { /* Filip la til glødeeffekt på h1, source= w3schools */
     font-family: myFont;
     font-size: 15px;
     color: darkred;
@@ -166,7 +159,7 @@ html, body {
     transform: translateX(-50%);
 }
 
-#boss{
+#boss{ /* En boss man skal møte på "senere" i spillet */
         position: absolute;
         transform: translateX(-50%);
         width: auto;
@@ -175,18 +168,6 @@ html, body {
         left: 60%;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* 
 
@@ -199,101 +180,15 @@ html, body {
 
 */
 
+/* Vi har lagt ved et liten easteregg på hovedsiden */
 
-#main-character {
+#info-box { /* Ole har lagt infobox oppe til venstre hjørne, #info-box t.o.m #info-box p:last-child */
     position: absolute;
-    height: 28%;
-    width: auto;
-    top: 65%;
-    left: 19%;
-}
-
-#main-character img{
-    max-width: 40%;
-    height: auto;
-}
-
-#main-character::before{
-    content: "";
-    position: absolute;
-    top: 2%;
-    left: 3%;
-    width: 95%;
-    height: 99%;
-    background: url('images/hovereffect-portal.gif') center center no-repeat;
-    background-size: cover;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-#main-character:hover::before{
-    opacity: 1;
-}
-
-#uther-hover {
-        width: 100px;
-        height: auto;
-        transition: transform 0.3s ease;
-}
-
-    #uther {
-    position: absolute;
-    transform: translateX(-50%); /* Sentrer GIF-en horisontalt */
-    height: 25%;
-    width: auto;
-    top: 49%;
-    left: 49%;
-    }
-
-    
-
-    #uther-text-overlay {
-        position: absolute;
-        top: 35%;
-        left: 45%;
-        width: 10%;
-        height: 10%;
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: #fff;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
-
-    #uther-hover:hover #uther-text-overlay {
-        display: flex;
-    }
-
-    
-   
-      
-  
-    #jaina-hover {
-        width: 100px;
-        height: auto;
-        transition: transform 0.3s ease;
-}
-
-#jaina {
-    position: absolute;
-    transform: scaleX(-1);
-    height: 28%;
-    width: auto;
-    top: 65%;
-    left: 60%;
-}
-
-
-#jaina-text-overlay {
-    position: absolute;
-    top: 35%;
-    left: 45%;
-    width: 10%;
+    top: 0; /* Ole, 0 top og 0 left betyr 0 piksler som pusher fra disse sidene, blir da plassert nemlig på top venstre siden. */
+    left: 0;
+    width: 20%;
     height: 10%;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -302,65 +197,494 @@ html, body {
     text-align: center;
     margin: 0;
     padding: 0;
+    overflow: hidden; 
+    z-index: 1; /* For at tekstboksen skal havne "oppå" bakgrunnsbildet */
+    border-right: #94792f solid 4px;
+    border-bottom: #94792f solid 4px;
 }
 
-#jaina-hover:hover #jaina-text-overlay {
+#info-box p { /* referer til paragraf teksten i infobox diven */
+    font-family: "Courier";
+    font-size: 14px;
+    white-space: nowrap;
+    margin: 0; 
+    padding: 5px; 
+}
+
+
+
+#main-character-text-overlay p { /* , main-character-text-overlay p t.o.m #main-character-hover:hover #main-character-text-overlay */
+    border-right: .15em solid orange;
+    font-family: "Courier";
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+    #main-character-text-overlay p:nth-child(1) { /* Første setningen i tekstboksen over main-character */
+      width: 15.3em; /* justerer hvor skrive-"streken" skal slutte */
+      -webkit-animation: type 2s steps(40, end); 
+      animation: type 2s steps(40, end);
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      padding: 0; /* Setter padding til 0 for å trekke setningene nærmere seg, vertikalt */
+      margin: 0; /* Setter margin til 0 for å trekke setningene nærmere seg, vertikalt */
+    }
+  
+    #main-character-text-overlay p:nth-child(2) { /* Andre setningen i tekstboksen over main-character */
+      width: 10em; /* justerer hvor skrive-"streken" skal slutte */
+      opacity: 0;
+      -webkit-animation: type2 2s steps(40, end);
+      animation: type2 2s steps(40, end);
+      -webkit-animation-delay: 2s;
+      animation-delay: 2s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      padding: 0; /* Setter padding til 0 for å trekke setningene nærmere seg, vertikalt */
+      margin: 0; /* Setter margin til 0 for å trekke setningene nærmere seg, vertikalt */
+    }
+  
+    @keyframes type { /* keyframes for typewriting effekt funnet på css-tricks */
+      0% {
+        width: 0;
+      }
+      99.9% {
+        border-right: .15em solid orange;
+      }
+      100% {
+        border: none;
+      }
+    }
+  
+    @-webkit-keyframes type { /* keyframes for typewriting effekt funnet på css-tricks */
+      0% {
+        width: 0;
+      }
+      99.9% {
+        border-right: .15em solid orange;
+      }
+      100% {
+        border: none;
+      }
+    }
+  
+    @keyframes type2 { /* keyframes for typewriting effekt funnet på css-tricks */
+      0% {
+        width: 0;
+      }
+      1% {
+        opacity: 1;
+      }
+      99.9% {
+        border-right: .15em solid orange;
+      }
+      100% {
+        opacity: 1;
+        border: none;
+      }
+    }
+  
+  @-webkit-keyframes type2 { /* keyframes for typewriting effekt funnet på css-tricks */
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      opacity: 1;
+      border: none;
+    }
+  }
+  
+  @keyframes blink { /* keyframes for typewriting effekt funnet på css-tricks */
+    50% {
+      border-color: transparent;
+    }
+  }
+
+    @-webkit-keyframes blink { /* keyframes for typewriting effekt funnet på css-tricks */
+      50% {
+        border-color: tranparent;
+      }
+    }
+
+    #main-character-hover { /* Ole endret størrelsen på hover området */
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+    }
+
+    #main-character { /* Ole endret posisjon og størrelse */
+    position: absolute;
+    height: 28%;
+    width: auto;
+    top: 65%;
+    left: 19%;
+    }
+
+    #main-character-text-overlay { /* Posisjon av tekstbobblen til main-character */
+    top: 50%;
+    left: 15%;
+    }
+
+    #main-character-hover:hover #main-character-text-overlay { /* Definerer flex */
     display: flex;
-}
+    }
 
-#jaina-portal {
+#uther-text-overlay p { /* Uther figur og egenskaper, samt txtbobblen til uther , #uther-text-overlay p t.o.m #uther-hover:hover #uther-text-overlay */
+    border-right: .15em solid orange;
+    font-family: "Courier";
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  #uther-text-overlay p:nth-child(1) { /* Første setningen i tekstboksen over Uther */
+    width: 18em;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type 2s steps(40, end);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #uther-text-overlay p:nth-child(2) { /* Andre setningen i tekstboksen over Uther */
+    width: 20.3em;
+    opacity: 0;
+    -webkit-animation: type2 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    padding: 0;
+    margin: 0;
+  }
+
+  #uther-text-overlay p:nth-child(3) { /* Tredje setningen i tekstboksen over Uther, la til denne */
+    width: 10em;
+    opacity: 0;
+    -webkit-animation: type3 2s steps(40, end);
+    animation: type3 2s steps(40, end);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 4s; /* må stå på 4 sekund slik at overgang mellom setningene blir bra */
+    animation-delay: 4s; /* må stå på 4 sekund slik at overgang mellom setningene blir bra */
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  
+  @keyframes type { /* keyframes for typewriting effekt funnet på css-tricks (samme som tidligere i koden på linje 240-306). */
+    0% {
+      width: 0;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      border: none;
+    }
+  }
+  
+  @-webkit-keyframes type {
+    0% {
+      width: 0;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      border: none;
+    }
+  }
+  
+  @keyframes type2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      opacity: 1;
+      border: none;
+    }
+  }
+  
+  @-webkit-keyframes type2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      opacity: 1;
+      border: none;
+    }
+  }
+
+  @keyframes type3 { /* La til en extra pga behov for en tredje setning underst */
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      opacity: 1;
+      border: none;
+    }
+  }
+  
+  @-webkit-keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      opacity: 1;
+      border: none;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  @-webkit-keyframes blink { 
+    50% {
+      border-color: transparent;
+    }
+  }
+
+
+    #uther-hover { /* Størrelsen på hoverområdet */
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+    }
+
+    #uther { /* Størrelse og posisjon på Uther  */
     position: absolute;
-    height: 28%; /* Beholder proporsjonene */
-    width: auto; /* Juster til ønsket bredde */
-    top: 65%; /* Juster til ønsket vertikal posisjon (for eksempel 70 piksler fra toppen) */
-    left: 70%; /* Sentrer GIF-en horisontalt */
-}
+    transform: translateX(-50%); /* Midtstiller */
+    height: 25%;
+    width: auto;
+    top: 52%;
+    left: 49%;
+    }
 
+    
 
+    #uther-text-overlay { /* Plassering av textbobblen til Uther */
+        top: 35%;
+        left: 42%;
+    }
 
-#arrow {
+    #uther-hover:hover #uther-text-overlay { /* Definerer flex */
+        display: flex;
+    }
+
+    
+   
+
+#jaina-text-overlay p { /* Definerer den oransje skrivestreken, størrelse, font osv */
+    border-right: .15em solid orange;
+    font-family: "Courier";
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    }
+
+    #jaina-text-overlay p:nth-child(1) { /* Definerer verdien for typewriting på første setning */
+    width: 9em; /* Hvor langt den oransje streken skal gå til/stoppe */
+    -webkit-animation: type 2s steps(40, end);
+    animation: type 2s steps(40, end);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    padding: 0;
+    margin: 0;
+    }
+      
+    #jaina-text-overlay p:nth-child(2) { /* Definerer verdien for typewriting på andre setning */
+    width: 13em;
+    opacity: 0;
+    -webkit-animation: type2 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    padding: 0;
+    margin: 0;
+    }
+      
+      @keyframes type { /* keyframes for typewriting effekt funnet på css-tricks (samme som tidligere i koden på linje 240-306). */
+        0% {
+          width: 0;
+        }
+        99.9% {
+          border-right: .15em solid orange;
+        }
+        100% {
+          border: none;
+        }
+      }
+      
+      @-webkit-keyframes type {
+        0% {
+          width: 0;
+        }
+        99.9% {
+          border-right: .15em solid orange;
+        }
+        100% {
+          border: none;
+        }
+      }
+      
+      @keyframes type2 {
+        0% {
+          width: 0;
+        }
+        1% {
+          opacity: 1;
+        }
+        99.9% {
+          border-right: .15em solid orange;
+        }
+        100% {
+          opacity: 1;
+          border: none;
+        }
+      }
+      
+      @-webkit-keyframes type2 {
+        0% {
+          width: 0;
+        }
+        1% {
+          opacity: 1;
+        }
+        99.9% {
+          border-right: .15em solid orange;
+        }
+        100% {
+          opacity: 1;
+          border: none;
+        }
+      }
+      
+     
+      
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+      @-webkit-keyframes blink {
+        50% {
+          border-color: tranparent;
+        }
+      }
+      
+  
+    #jaina-hover { /* Størrelsen på hoverområdet */
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+    }
+
+    #jaina { /* Posisjon og størrelse til Jaina */
     position: absolute;
-    transform: translateX(-50%); /* Sentrer GIF-en horisontalt */
-    height: 8%; /* Beholder proporsjonene */
-    width: auto; /* Juster til ønsket bredde */
-    top: 68%; /* Juster til ønsket vertikal posisjon (for eksempel 70 piksler fra toppen) */
-    left: 86%; /* Sentrer GIF-en horisontalt */
-    transform: scaleX(-1) rotate(28deg)
-}
+    transform: scaleX(-1); /* scaleX(-1) for å flippe bildet motsatt vei */
+    height: 28%;
+    width: auto;
+    top: 65%;
+    left: 60%;
+    }
+
+
+    #jaina-text-overlay { /* Posisjon av tekstboblen til Jaina */
+    top: 55%; 
+    left: 58%; 
+   
+    }
+
+    #jaina-hover:hover #jaina-text-overlay { /* Definerer flex */
+    display: flex;
+    }
+
+#jaina-portal { /* Ole endret størrelse og posisjon for portalen */
+    display: flex;
+    position: absolute;
+    height: 24%; 
+    width: auto; 
+    top: 65%; 
+    left: 70%;
+    justify-content: center;
+    align-items: center;
+    }
 
 
 
-.glitch_wrap {
+.glitch_wrap { /* Glitch klassene og keyframes har jeg (Ole Martin) fått insirasjon fra youtube, justert mye på størrelse og posisjon.  */
     width: 120px;
     height: 120px;
+    top: 24px;
+    left: 120px;
     overflow: hidden;
     position: absolute;
-    transform: translateX(417px) translateY(220px);
+    justify-content: center;
+    align-items: center;
 }
 
 
 
-.glitch {
+.glitch { 
     position: absolute;
-    top: 0; /* Juster til ønsket vertikal posisjon (for eksempel 70 piksler fra toppen) */
-    left: 0; /* Sentrer GIF-en horisontalt */
+    top: 0; 
+    left: 0; 
     right: 0;
     bottom: 0;
     background: url(images/pixel-slott2.png);
     background-size: cover;
-    transform: scale(1.1) perspective(100px) rotate(10deg); /* Sentrer GIF-en horisontalt */
+    transform: scale(1.1) perspective(100px) rotate(10deg); 
     opacity: 0.4;
+    justify-content: center;
+    align-items: center;
 
 }
 
-.glitch:after, .glitch:before {
+.glitch:after, .glitch:before { 
     content: "";
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
-    background: inherit;
+    background: inherit; 
     transform: translateX(10px);
     animation-duration: 3s;
     animation-timing-function: linear;
@@ -377,7 +701,7 @@ html, body {
 .glitch:after {
     animation-name: glitchAnimate2;
 }
-@keyframes glitchAnimate1 {
+@keyframes glitchAnimate1 { /* keyframes for en "glitchy" effekt på slottet inni portalen på main.html funnet på youtube, kopiert for hånd ved å se på youtube. */
     0%,25.1%,100%{
     clip-path: polygon(0 0, 0 0, 0 0, 0 0);
     }
@@ -413,7 +737,7 @@ html, body {
     }
 }
 
-@keyframes glitchAnimate2 {
+@keyframes glitchAnimate2 { /* keyframes for en "glitchy" effekt på slottet inni portalen på main.html funnet på youtube, kopiert for hånd ved å se på youtube. */
     0%,25.1%,100% {
         clip-path: polygon(0 0, 0 0, 0 0, 0 0);
     }
@@ -453,63 +777,46 @@ html, body {
 }
 
 
-
-/* */
-
-
-
-.trigger-checkbox {
-    display: none; /* Hide the checkbox */
+.trigger-checkbox { /* Fått hjelp av ChatGPT med checkbox og label, har fjernet psudoklasser og justert etter behov */
+    display: none; /* Denne gjør at knappen ikke synes */
     
   }
   
-  .trigger-label {
+  .trigger-label {  /* Checkboxen, av og på */
     cursor: pointer;
     position: absolute;
-    /* Adjust as needed to move gif1 to the far right */
-    top: 33.3%;
-    left: 80%;
+    top: 54.2%;
+    left: 99%;
     padding: 0;
     margin: 0;
-    height: 5%;
-    width: auto;
-    transform: scaleX(-1);
+    height: 10%;
+    width: auto; 
+    transform: scaleX(-1); /* Flipper sylvanas motsatt vei */
     
   }
   
-  #arrow {
-    opacity: 1; /* Initially, make the arrow visible */
-   /*transition: opacity 1s ease-in-out; /* Add transition effect */
-    position: absolute;
-    top: 62%; /* Adjust as needed to position the arrow vertically */
-    left: 80%; /* Adjust as needed to position the arrow horizontally */
-    animation: moveArrow 1 linear; /* Animation for moving the arrow */
-    transform: scaleX(-1) rotate(30deg);
-  }
-  
-  @keyframes moveArrow {
-    to {
-      transform: translateX(800%) translateY(100%) rotate(30deg); /* Move the arrow farther to the left */
-      opacity: 1;
-    }
-  }
-  
-  /*#trigger:not(:checked) ~ #arrow {
-    opacity: 1; /* Make the arrow invisible when the checkbox is not checked */
-   /* transform: } */
-  
-  #trigger:checked ~ #arrow {
+
+
+  #arrow { /* Ole endret og definert hvor pilen skal være til vanlig, med posisjon og størrelse */
     opacity: 1;
-    transform: scaleX(-1)translateX(800%) translateY(100%) rotate(30deg); /* Move the picture farther to the left */
-    transition: all 1s linear; /* Faster transition */
+    position: absolute;
+    height: 4%;
+    width: auto;
+    top: 72%;
+    left: 86.5%; 
+    transform: scaleX(-1) rotate(28deg); /* Flipper bilde, roterer litt på pilen */
   }
   
-  #trigger:checked ~ #arrow {
-    opacity: 0; /* Make the arrow visible when the checkbox is checked */
+ 
+  
+  #trigger:checked ~ #arrow { /* Regel, checkbox sjekket av referert til pilen. Da skal pilen skytes. */
+    opacity: 1;
+    transform: scaleX(-1)translateX(1220px) translateY(10px) rotate(28deg); /* Må definere rotasjon her også ellers vil pilen tulle når den fyker av gårde. */
+    transition: all 1s linear; /* På 1 sekund skal dette skje */
   }
   
- /* Apply the blink animation to #herodiv */
-#trigger:checked ~ #herodiv::before {
+
+#trigger:checked ~ #main-character-hover::before { /* Blink animasjon som blir kjørt når checkbox blir checked av */
     content: '';
     position: absolute;
     top: 65%;
@@ -518,14 +825,14 @@ html, body {
     height: 30%;
     background-image: url(images/hitsplat.png);
     background-repeat: no-repeat;
-    background-size: 50%; /* Adjust the background size as needed */
-    background-position: center; /* Center the background around #hero */
+    background-size: 50%; 
+    background-position: center; 
     opacity: 0;
-    animation: blink 1s alternate; /* Blink once */
-    animation-delay: 0.85s;
+    animation: blink 1.4s alternate;
+    animation-delay: 0.85s; /* Ole satt delay slik at blodsprutet ikke skjer akkurat med en gang , men timet med når pilen treffer */
 }
 
-@keyframes blink {
+@keyframes blink { /* Keyframe som gjør blod bakgrunn synlig gjennom animasjons perioden, før forje verdier gjør den usynlig igjen */
     0% {
         opacity: 0;
     }
@@ -535,33 +842,50 @@ html, body {
 }
 
   
-  /* Hide the arrow after gif2 blinks */
-  #trigger:checked ~ .picture + #hero-container #hero {
-    animation: none;
-  }
+
+  #sylvanas { /* Ole endret posisjon og størrelse for sylvanas figur */
+    position: absolute;
+    height: 250px;
+    width: auto;
+    top: 65%;
+    left: 60%;
+}
   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#trigger:checked ~ #sylvanas-text-overlay { /* text-box for sylvanas som skjer etter checkbox har blitt huket av */
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 88%;
+    width: 10%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    transition: all 0s linear; 
+    border: #fff solid 2px;
+  }
+  
+  
+ .text-overlay { /* Felles verdier for text-boksene på hover */
+  position: absolute;
+  width: 15%; 
+  height: 11%; 
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: #fff solid 2px;
+ }
